@@ -3,6 +3,7 @@
 #include <string>
 #include "permutations.hpp"
 #include "tic_tac_toe.hpp"
+#include "center_text.hpp"
 
 void clear_screen() {
     #ifdef _WIN32
@@ -22,6 +23,7 @@ int main() {
         std::cout << "Program list:" << std::endl;
         std::cout << "1. Tic Tac Toe" << std::endl;
         std::cout << "2. Permutations" << std::endl;
+        std::cout << "3. Center text" << std::endl;
         std::cout << "0. Exit" << std::endl;
         std::cout << "Which program would you like to run? : ";
         std::cin >> program;
@@ -37,6 +39,9 @@ int main() {
                 break;
             case 2:
                 permutations_init();
+                break;
+            case 3:
+                center_text_init();
                 break;
             default:
                 std::cout << "Wrong input!" << std::endl;
