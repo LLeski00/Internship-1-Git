@@ -4,6 +4,7 @@
 #include "permutations.hpp"
 #include "tic_tac_toe.hpp"
 #include "center_text.hpp"
+#include "diamond_generator.hpp"
 
 void clear_screen() {
     #ifdef _WIN32
@@ -24,6 +25,7 @@ int main() {
         std::cout << "1. Tic Tac Toe" << std::endl;
         std::cout << "2. Permutations" << std::endl;
         std::cout << "3. Center text" << std::endl;
+        std::cout << "4. Diamond generator" << std::endl;
         std::cout << "0. Exit" << std::endl;
         std::cout << "Which program would you like to run? : ";
         std::cin >> program;
@@ -42,6 +44,9 @@ int main() {
                 break;
             case 3:
                 center_text_init();
+                break;
+            case 4:
+                diamond_generator_init();
                 break;
             default:
                 std::cout << "Wrong input!" << std::endl;
